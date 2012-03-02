@@ -253,10 +253,16 @@ function init(){
                 this.direction = 1;
             else if (projected_y < this.y)
                 this.direction = -1;
-            this.y += this.speed * this.direction;
+            
         }
-        
-      
+        else if (ball.xdirection == -1){
+			middle = this.y + this.height / 2;
+			if (middle > canvas.height / 2)
+				this.direction  = -1;
+			else if (middle < canvas.height / 2)
+				this.direction = 1;	
+		}
+		this.y += this.speed * this.direction;
         
     }
     player2.speed = 3;
