@@ -95,7 +95,7 @@ function Ball(x,y,size){
 	this.size = typeof size == 'undefined' ? 10 : size;
 	this.xdirection = 1;
 	this.ydirection = 1;
-	this.speed = 7;
+	this.speed = 5.5;
 	this.draw = function (){
         ctx.fillRect(this.x,this.y,this.size,this.size);
     };
